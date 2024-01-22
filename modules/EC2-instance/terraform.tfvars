@@ -1,0 +1,5 @@
+# ami = "ami-05fb0b8c1424f266b"
+# host_id = "757886166871"
+# instance_type = "t2.micro"
+# key_name = "tf-ec2-instance1-key"
+# instance_name = "tf-ec2-instance1"
