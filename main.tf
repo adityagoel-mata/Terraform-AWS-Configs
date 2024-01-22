@@ -14,7 +14,7 @@ module "ec2_instance" {
   ami = var.ami
   host_id = var.host_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [module.security_group.tf-sg-1.id]
+  vpc_security_group_ids = [module.security_group.security_group_id]
   key_name = var.key_name
   instance_name = var.instance_name
 

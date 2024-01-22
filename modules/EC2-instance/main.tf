@@ -1,4 +1,4 @@
-resource "aws_instances" "ec2-instance" {
+resource "aws_instance" "ec2-instance" {
 
   ami = var.ami
   host_id = var.host_id
