@@ -11,3 +11,15 @@ variable "instance_name" {}
 variable "sg_name" {}
 variable "sg_description" {}
 variable "sg_tag_name" {}
+
+#RDS variable declaration
+
+variable "allocated_storage" {}
+variable "db_name" {}
+variable "engine" {}
+variable "engine_version" {}
+variable "instance_class" {}
+variable "username" {}
+variable "password" {}
+variable "parameter_group_name" {}
+variable "skip_final_snapshot" {}
