@@ -1,5 +1,5 @@
 module "security_group" {
-  source = "./modules/Security-Group"
+  source = "./../modules/Security-Group"
 
   sg_name        = var.sg_name
   sg_description = var.sg_description
@@ -8,7 +8,7 @@ module "security_group" {
 }
 
 module "ec2_instance" {
-  source = "./modules/EC2-instance"
+  source = "./../modules/EC2-instance"
 
   ami                    = var.ami
   instance_type          = var.instance_type
