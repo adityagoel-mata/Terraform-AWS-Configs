@@ -1,0 +1,1 @@
+This project is to create an EC2 instance from the EC2-instance module and attach a custom Security Group from a Security-Group module.
