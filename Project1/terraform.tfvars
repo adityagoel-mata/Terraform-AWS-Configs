@@ -6,6 +6,10 @@ instance_name = "tf-ec2-instance1"
 
 #SG variables
 
-sg_name           = "default-sg"
-sg_description    = "This allows HTTP, HTTPS and SSH requests"
-sg_tag_name       = "default-sg"
+ec2_sg_name           = "default-sg"
+ec2_sg_description    = "This allows HTTP, HTTPS and SSH requests"
+ec2_sg_tag_name       = "default-sg"
+ec2_from_port         = 80
+ec2_to_port           = 80
+ec2_protocol          = "tcp"
+ec2_cidr_blocks       = ["0.0.0.0/0"]
