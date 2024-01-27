@@ -20,13 +20,12 @@ db_sg_tag_name       = "tf-db-sg"
 db_from_port         = 3306
 db_to_port           = 3306
 db_protocol          = "tcp"
-db_security_groups = ""
 
 
 #DB instance variables
 
 allocated_storage    = 10
-db_name              = "tf-mydb"
+db_name              = "mydb"   
 engine               = "mysql"
 engine_version       = "5.7"
 instance_class       = "db.t3.micro"
