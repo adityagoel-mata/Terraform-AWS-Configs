@@ -17,5 +17,6 @@ module "ec2_security_group" {
   to_port        = var.ec2_to_port
   protocol       = var.ec2_protocol 
   cidr_blocks    = var.ec2_cidr_blocks
+  security_groups = var.ec2_security_groups
 
 }
