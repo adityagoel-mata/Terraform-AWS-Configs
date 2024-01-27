@@ -13,3 +13,4 @@ ec2_from_port         = 80
 ec2_to_port           = 80
 ec2_protocol          = "tcp"
 ec2_cidr_blocks       = ["0.0.0.0/0"]
+ec2_security_groups = null
