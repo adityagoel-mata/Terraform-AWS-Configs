@@ -6,6 +6,10 @@ variable "instance_name" {}
 
 #SG variable declaration
 
-variable "sg_name" {}
-variable "sg_description" {}
-variable "sg_tag_name" {}
+variable "ec2_sg_name" {}
+variable "ec2_sg_description" {}
+variable "ec2_sg_tag_name" {}
+variable "ec2_from_port" {}
+variable "ec2_to_port" {}
+variable "ec2_protocol" {}
+variable "ec2_cidr_blocks" {}
