@@ -20,7 +20,7 @@ db_sg_tag_name       = "tf-db-sg"
 db_from_port         = 3306
 db_to_port           = 3306
 db_protocol          = "tcp"
-db_cidr_blocks       = ["0.0.0.0/0"]
+db_security_groups = ""
 
 
 #DB instance variables
