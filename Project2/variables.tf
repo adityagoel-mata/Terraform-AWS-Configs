@@ -20,7 +20,6 @@ variable "db_sg_tag_name" {}
 variable "db_from_port" {}
 variable "db_to_port" {}
 variable "db_protocol" {}
-variable "db_security_groups" {}
 
 
 #DB instance variable declaration
