@@ -5,5 +5,9 @@ variable "sg_tag_name" {}
 variable "from_port" {}
 variable "to_port" {}
 variable "protocol" {}
-variable "cidr_blocks" {}
-variable "security_groups" {}
+variable "cidr_blocks" {
+  default = null
+}
+variable "security_groups" {
+  default = null
+}

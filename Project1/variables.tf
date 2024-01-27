@@ -13,4 +13,3 @@ variable "ec2_from_port" {}
 variable "ec2_to_port" {}
 variable "ec2_protocol" {}
 variable "ec2_cidr_blocks" {}
-variable "ec2_security_groups" {}
