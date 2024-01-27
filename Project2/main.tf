@@ -19,7 +19,7 @@ module "mysql_db_instance" {
   password             = var.password
   parameter_group_name = var.parameter_group_name
   skip_final_snapshot  = var.skip_final_snapshot
-  vpc_security_group_ids = [module.db_security_group.db_security_group_id]
+  vpc_security_group_ids = [module.db_security_group.security_group_id]
 
 }
 
