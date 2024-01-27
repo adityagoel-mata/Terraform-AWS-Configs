@@ -1,4 +1,4 @@
-resource "aws_db_instance" "db_instance" {
+resource "aws_db_instance" "dbInstance" {           #resource name must only contain AlphaNumeric chars
 
   allocated_storage    = var.allocated_storage      #In GBs
   db_name              = var.db_name
