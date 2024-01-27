@@ -1,4 +1,4 @@
-resource "aws_db_instance" "default" {
+resource "aws_db_instance" "db_instance" {
 
   allocated_storage    = var.allocated_storage      #In GBs
   db_name              = var.db_name
