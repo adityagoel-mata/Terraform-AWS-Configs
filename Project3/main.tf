@@ -4,7 +4,7 @@ module "ec2_launch_template" {
   name          = var.ec2_lt_name
   image_id      = var.ec2_lt_image_id
   instance_type = var.ec2_lt_instance_type
-  vpc_security_group_ids = module.ec2_security_group.security_group_id
+  vpc_security_group_ids = [module.ec2_security_group.security_group_id]
 }
 
 module "autoscaling-group" {
