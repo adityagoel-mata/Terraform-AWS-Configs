@@ -10,4 +10,3 @@ variable "asg_ec2_availability_zones" {}
 variable "asg_ec2_desired_capacity" {}
 variable "asg_ec2_max_size" {}
 variable "asg_ec2_min_size" {}
-variable "asg_lt_version" {}

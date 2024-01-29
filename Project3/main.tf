@@ -14,6 +14,5 @@ module "autoscaling-group" {
   max_size           = var.asg_ec2_max_size
   min_size           = var.asg_ec2_min_size
   id                 = module.ec2_launch_template.launch_template_id
-  version            = var.asg_lt_version
 
 }

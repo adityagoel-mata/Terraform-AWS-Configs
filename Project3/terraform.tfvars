@@ -10,4 +10,3 @@ asg_ec2_availability_zones = ["us-east-2a"]
 asg_ec2_desired_capacity = 1
 asg_ec2_max_size = 2
 asg_ec2_min_size = 1
-asg_lt_version = "$Latest"

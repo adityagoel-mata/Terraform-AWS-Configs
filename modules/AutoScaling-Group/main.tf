@@ -5,7 +5,6 @@ resource "aws_autoscaling_group" "bar" {
   min_size           = var.min_size
 
   launch_template {
-    id      = var.id
-    version = var.version
+    id = var.id
   }
 }
