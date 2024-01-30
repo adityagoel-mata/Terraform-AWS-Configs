@@ -11,6 +11,7 @@ module "public_subnet" {
 
   vpc_id            = module.vpc.vpc_id
   availability_zone = var.public_subnet_availability_zone
+  cidr_block        = var.public_subnet_cidr_block
   Name              = var.public_subnet_Name
   
 }
@@ -21,6 +22,7 @@ module "private_subnet" {
 
   vpc_id            = module.vpc.vpc_id
   availability_zone = var.private_subnet_availability_zone
+  cidr_block        = var.private_subnet_cidr_block
   Name              = var.private_subnet_Name
   
 }
