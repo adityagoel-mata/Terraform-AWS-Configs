@@ -6,6 +6,26 @@ module "vpc" {
 }
 
 
+module "public_route_table" {
+  source = "./../modules/Route-Table"
+
+  vpc_id = module.vpc.vpc_id
+  cidr_block = var.public_route_table_cidr_block
+  gateway_id = var.public_route_table_gateway_id
+  Name = var.public_route_table_Name
+}
+
+
+module "private_route_table" {
+  source = "./../modules/Route-Table"
+
+  vpc_id = module.vpc.vpc_id
+  cidr_block = var.private_route_table_cidr_block
+  gateway_id = var.private_route_table_gateway_id
+  Name = var.private_route_table_Name
+}
+
+
 module "public_subnet" {
   source = "./../modules/Subnet"
 

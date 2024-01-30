@@ -2,6 +2,16 @@
 vpc_cidr_block = "10.0.0.0/16"
 vpc_name = "tf-VPC"
 
+#Public Route Table Variables
+public_route_table_cidr_block = "0.0.0.0/0"
+public_route_table_gateway_id = "local"
+public_route_table_Name = "tf-public-route-table"
+
+#Private Route Table Variables
+private_route_table_cidr_block = "10.0.0.0/16"
+private_route_table_gateway_id = "local"
+private_route_table_Name = "tf-private-route-table"
+
 #Public Subnet Variables
 public_subnet_availability_zone = "us-east-2a"
 public_subnet_cidr_block = "10.0.1.0/24"
