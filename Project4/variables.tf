@@ -2,9 +2,11 @@
 variable "vpc_cidr_block" {}
 variable "vpc_name" {}
 
+#Internet Gateway Variable Declaration
+variable "internet_gateway_name" {}
+
 #Public Route Table Variable Declaration
 variable "public_route_table_cidr_block" {}
-variable "public_route_table_gateway_id" {}
 variable "public_route_table_Name" {}
 
 #Private Route Table Variable Declaration

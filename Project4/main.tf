@@ -1,23 +1,30 @@
 module "vpc" {
-  source = "./../modules/VPC"
+  source = "../modules/VPC"
 
   cidr_block = var.vpc_cidr_block
   name = var.vpc_name
 }
 
+module "internet_gateway" {
+  source = "../modules/Internet-Gateway"
+
+  vpc_id = module.vpc.vpc_id
+  Name = var.internet_gateway_name
+  
+}
 
 module "public_route_table" {
-  source = "./../modules/Route-Table"
+  source = "../modules/Route-Table"
 
   vpc_id = module.vpc.vpc_id
   cidr_block = var.public_route_table_cidr_block
-  gateway_id = var.public_route_table_gateway_id
+  gateway_id = module.internet_gateway.internet_gateway_id
   Name = var.public_route_table_Name
 }
 
 
 module "private_route_table" {
-  source = "./../modules/Route-Table"
+  source = "../modules/Route-Table"
 
   vpc_id = module.vpc.vpc_id
   cidr_block = var.private_route_table_cidr_block
@@ -27,7 +34,7 @@ module "private_route_table" {
 
 
 module "public_subnet" {
-  source = "./../modules/Subnet"
+  source = "../modules/Subnet"
 
   vpc_id            = module.vpc.vpc_id
   availability_zone = var.public_subnet_availability_zone
@@ -38,7 +45,7 @@ module "public_subnet" {
 
 
 module "private_subnet" {
-  source = "./../modules/Subnet"
+  source = "../modules/Subnet"
 
   vpc_id            = module.vpc.vpc_id
   availability_zone = var.private_subnet_availability_zone
