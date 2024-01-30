@@ -7,6 +7,7 @@ resource "aws_security_group" "security_group" {
     to_port = var.to_port
     protocol = var.protocol
     cidr_blocks = var.cidr_blocks
+    security_groups = var.security_groups
 
   }
 

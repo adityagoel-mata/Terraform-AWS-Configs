@@ -44,8 +44,8 @@ module "db_security_group" {
   sg_tag_name    = var.db_sg_tag_name
   from_port      = var.db_from_port
   to_port        = var.db_to_port
-  protocol       = var.db_protocol 
-  cidr_blocks    = var.db_cidr_blocks
+  protocol       = var.db_protocol
+  security_groups = [module.ec2_security_group.security_group_id]
 
 }
 
