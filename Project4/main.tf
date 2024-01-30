@@ -9,7 +9,7 @@ module "vpc" {
 module "public_subnet" {
   source = "./../modules/Subnet"
 
-  vpc_id            = [module.vpc.vpc_id]
+  vpc_id            = module.vpc.vpc_id
   availability_zone = var.public_subnet_availability_zone
   Name              = var.public_subnet_Name
   
@@ -19,7 +19,7 @@ module "public_subnet" {
 module "private_subnet" {
   source = "./../modules/Subnet"
 
-  vpc_id            = [module.vpc.vpc_id]
+  vpc_id            = module.vpc.vpc_id
   availability_zone = var.private_subnet_availability_zone
   Name              = var.private_subnet_Name
   
