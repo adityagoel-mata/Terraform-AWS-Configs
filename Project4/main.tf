@@ -6,16 +6,25 @@ module "vpc" {
 }
 
 
-#Configurations for Public Subnet and its components.
 module "public_subnet" {
   source            = "../modules/Subnet"
 
-  count             = 2
   vpc_id            = module.vpc.vpc_id
-  availability_zone = var.public_subnet_availability_zone[count.index]
-  cidr_block        = var.public_subnet_cidr_block[count.index]
-  Name              = "Public-Subnet-${count.index}"
+  availability_zone = var.public_subnet_availability_zone
+  cidr_block        = var.public_subnet_cidr_block
+  Name              = var.public_subnet_Name
+  
+}
 
+
+module "private_subnet" {
+  source            = "../modules/Subnet"
+
+  vpc_id            = module.vpc.vpc_id
+  availability_zone = var.private_subnet_availability_zone
+  cidr_block        = var.private_subnet_cidr_block
+  Name              = var.private_subnet_Name
+  
 }
 
 
@@ -27,7 +36,6 @@ module "internet_gateway" {
   
 }
 
-
 module "public_route_table" {
   source     = "../modules/Route-Table"
 
@@ -35,28 +43,6 @@ module "public_route_table" {
   cidr_block = var.public_route_table_cidr_block
   gateway_id = module.internet_gateway.internet_gateway_id
   Name       = var.public_route_table_Name
-}
-
-
-module "public_route_table_association" {
-  source         = "../modules/Route-Table-Association"
-  
-  count = 2
-  subnet_id      = module.public_subnet[count.index].subnet_id
-  route_table_id = module.public_route_table.route_table_id
-}
-
-
-#Configurations for Private Subnet and its components.
-module "private_subnet" {
-  source            = "../modules/Subnet"
-
-  count             = 2
-  vpc_id            = module.vpc.vpc_id
-  availability_zone = var.private_subnet_availability_zone[count.index]
-  cidr_block        = var.private_subnet_cidr_block[count.index]
-  Name              = "Private-Subnet-${count.index}"
-
 }
 
 
@@ -70,10 +56,18 @@ module "private_route_table" {
 }
 
 
+module "public_route_table_association" {
+  source         = "../modules/Route-Table-Association"
+
+  subnet_id      = module.public_subnet.subnet_id
+  route_table_id = module.public_route_table.route_table_id
+}
+
+
 module "private_route_table_association" {
   source         = "../modules/Route-Table-Association"
 
-  count = 2
-  subnet_id      = module.private_subnet[count.index].subnet_id
+  subnet_id      = module.private_subnet.subnet_id
   route_table_id = module.private_route_table.route_table_id
 }
+
