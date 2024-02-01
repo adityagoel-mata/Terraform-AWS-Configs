@@ -149,6 +149,6 @@ module "db_subnet_group" {
   source = "../modules/DB-Subnet-Group"
 
   name = var.db_subnet_group_name
-  subnet_ids = module.private_subnet[0].subnet_id
+  subnet_ids = [module.private_subnet[0].subnet_id]
   Name = var.db_subnet_group_Name
 }
