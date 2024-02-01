@@ -126,7 +126,7 @@ module "mysql_db_instance" {
   password             = var.password
   parameter_group_name = var.parameter_group_name
   skip_final_snapshot  = var.skip_final_snapshot
-  db_subnet_group_name = module.public_subnet.subnet_id[0]
+  db_subnet_group_name = module.public_subnet[0].subnet_id
   vpc_security_group_ids = [module.db_security_group.security_group_id]
 }
 
