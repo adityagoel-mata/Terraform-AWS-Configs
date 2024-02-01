@@ -2,8 +2,8 @@
 vpc_cidr_block = "10.0.0.0/16"
 vpc_name = "tf-VPC"
 
-# #Internet Gateway Variables
-# internet_gateway_name = "tf-igw"
+#Internet Gateway Variables
+internet_gateway_name = "tf-igw"
 
 # #Public Route Table Variables
 # public_route_table_cidr_block = "0.0.0.0/0"
