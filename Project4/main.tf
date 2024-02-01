@@ -9,10 +9,12 @@ module "vpc" {
 module "public_subnet" {
   source            = "../modules/Subnet"
 
+  count             = 2
   vpc_id            = module.vpc.vpc_id
   availability_zone = var.public_subnet_availability_zone
   cidr_block        = var.public_subnet_cidr_block
-  Name              = var.public_subnet_Name
+  # Name              = var.public_subnet_Name
+  Name              = "Public-Subnet-${count.index}"
   
 }
 
