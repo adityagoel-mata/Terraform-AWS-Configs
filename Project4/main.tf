@@ -13,7 +13,7 @@ module "public_subnet" {
   availability_zone = var.public_subnet_availability_zone
   cidr_block        = var.public_subnet_cidr_block
   # Name              = var.public_subnet_Name
-  Name              = "Public-Subnet-${count.index}"
+  Name              = "Public-Subnet-${counts.index}"
   
 }
 
