@@ -112,3 +112,33 @@ module "ec2_security_group" {
   protocol       = var.ec2_lt_protocol 
   cidr_blocks    = var.ec2_lt_cidr_blocks
 }
+
+
+module "mysql_db_instance" {
+  source = "./../modules/RDS-instance"
+
+  allocated_storage    = var.allocated_storage      #In GBs
+  db_name              = var.db_name
+  engine               = var.engine
+  engine_version       = var.engine_version
+  instance_class       = var.instance_class
+  username             = var.username
+  password             = var.password
+  parameter_group_name = var.parameter_group_name
+  skip_final_snapshot  = var.skip_final_snapshot
+  db_subnet_group_name = module.public_subnet[*].Name
+  vpc_security_group_ids = [module.db_security_group.security_group_id]
+}
+
+
+module "db_security_group" {
+  source = "./../modules/Security-Group"
+
+  sg_name        = var.db_sg_name
+  sg_description = var.db_sg_description
+  sg_tag_name    = var.db_sg_tag_name
+  from_port      = var.db_from_port
+  to_port        = var.db_to_port
+  protocol       = var.db_protocol
+  security_groups = [module.ec2_security_group.security_group_id]
+}

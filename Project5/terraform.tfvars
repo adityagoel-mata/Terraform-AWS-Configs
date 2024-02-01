@@ -48,3 +48,24 @@ ec2_lt_from_port         = 80
 ec2_lt_to_port           = 80
 ec2_lt_protocol          = "tcp"
 ec2_lt_cidr_blocks       = ["0.0.0.0/0"]
+
+
+#DB instance variables
+allocated_storage    = 10
+db_name              = "mydb"   
+engine               = "mysql"
+engine_version       = "5.7"
+instance_class       = "db.t3.micro"
+username             = "aditya"
+password             = "adityaPassword"
+parameter_group_name = "default.mysql5.7"
+skip_final_snapshot  = true
+
+
+#DB Security Group variables
+db_sg_name           = "tf-db-sg"
+db_sg_description    = "This allows requests only from ec2"
+db_sg_tag_name       = "tf-db-sg"
+db_from_port         = 3306
+db_to_port           = 3306
+db_protocol          = "tcp"

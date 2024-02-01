@@ -50,3 +50,24 @@ variable "ec2_lt_from_port" {}
 variable "ec2_lt_to_port" {}
 variable "ec2_lt_protocol" {}
 variable "ec2_lt_cidr_blocks" {}
+
+
+#DB instance variable declaration
+variable "allocated_storage" {}
+variable "db_name" {}
+variable "engine" {}
+variable "engine_version" {}
+variable "instance_class" {}
+variable "username" {}
+variable "password" {}
+variable "parameter_group_name" {}
+variable "skip_final_snapshot" {}
+
+
+#DB Security Group variable declaration
+variable "db_sg_name" {}
+variable "db_sg_description" {}
+variable "db_sg_tag_name" {}
+variable "db_from_port" {}
+variable "db_to_port" {}
+variable "db_protocol" {}
