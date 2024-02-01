@@ -126,7 +126,7 @@ module "mysql_db_instance" {
   password             = var.password
   parameter_group_name = var.parameter_group_name
   skip_final_snapshot  = var.skip_final_snapshot
-  db_subnet_group_name = module.private_subnet[0].subnet_id
+  db_subnet_group_name = module.db_subnet_group.name
   vpc_security_group_ids = [module.db_security_group.security_group_id]
 }
 
@@ -142,4 +142,13 @@ module "db_security_group" {
   to_port        = var.db_to_port
   protocol       = var.db_protocol
   security_groups = [module.ec2_security_group.security_group_id]
+}
+
+
+module "db_subnet_group" {
+  source = "../modules/DB-Subnet-Group"
+
+  name = var.db_subnet_group_name
+  subnet_ids = module.private_subnet[0].subnet_id
+  Name = var.db_subnet_group_Name
 }

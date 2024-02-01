@@ -71,3 +71,8 @@ variable "db_sg_tag_name" {}
 variable "db_from_port" {}
 variable "db_to_port" {}
 variable "db_protocol" {}
+
+
+#DB-subnet-group variable declaration
+variable "db_subnet_group_name" {}
+variable "db_subnet_group_Name" {}

@@ -69,3 +69,8 @@ db_sg_tag_name       = "tf-db-sg"
 db_from_port         = 3306
 db_to_port           = 3306
 db_protocol          = "tcp"
+
+
+#DB-Subnet-Group variables
+db_subnet_group_name = "tf-db-sg-nameArgument"
+db_subnet_group_Name = "tf-db-sg-Name"
