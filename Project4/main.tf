@@ -37,10 +37,10 @@ module "public_route_table" {
 }
 
 
-# module "public_route_table_association" {
-#   source         = "../modules/Route-Table-Association"
+module "public_route_table_association" {
+  source         = "../modules/Route-Table-Association"
 
-#   subnet_id      = module.public_subnet.subnet_id
-#   route_table_id = module.public_route_table.route_table_id
-# }
+  subnet_id      = module.public_subnet.subnet_id
+  route_table_id = module.public_route_table.route_table_id
+}
 
