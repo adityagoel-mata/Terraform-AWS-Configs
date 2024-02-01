@@ -13,8 +13,8 @@ module "public_subnet" {
   vpc_id            = module.vpc.vpc_id
   availability_zone = var.public_subnet_availability_zone[count.index]
   cidr_block        = var.public_subnet_cidr_block[count.index]
-  Name              = var.public_subnet_Name
-  # Name              = "Public-Subnet-${count.index}"
+  # Name              = var.public_subnet_Name
+  Name              = "Public-Subnet-${count.index}"
 
   
 }

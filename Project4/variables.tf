@@ -18,7 +18,7 @@ variable "vpc_name" {}
 # variable "public_subnet_count" {}
 variable "public_subnet_availability_zone" {}
 variable "public_subnet_cidr_block" {}
-variable "public_subnet_Name" {}
+# variable "public_subnet_Name" {}
 
 # #Private Subnet Variable declaration
 # variable "private_subnet_availability_zone" {}

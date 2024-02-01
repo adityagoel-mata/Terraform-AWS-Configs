@@ -18,7 +18,7 @@ vpc_name = "tf-VPC"
 # public_subnet_count = 2
 public_subnet_availability_zone = ["us-east-2a", "us-east-2b"]
 public_subnet_cidr_block = ["10.0.1.0/24", "10.0.2.0/24"]
-public_subnet_Name = ["Public-Subnet0", "Public-Subnet1"]
+# public_subnet_Name = ["Public-Subnet0", "Public-Subnet1"]
 
 # #Private Subnet Variables
 # private_subnet_availability_zone = "us-east-2b"
