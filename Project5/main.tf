@@ -92,7 +92,8 @@ module "ec2_launch_template" {
 module "autoscaling-group" {
   source = "./../modules/AutoScaling-Group"
   
-  vpc_zone_identifier = [module.public_subnet[*].subnet_id]
+  count = 2
+  vpc_zone_identifier = [module.public_subnet[count.index].subnet_id]
   desired_capacity    = var.asg_ec2_desired_capacity
   max_size            = var.asg_ec2_max_size
   min_size            = var.asg_ec2_min_size
