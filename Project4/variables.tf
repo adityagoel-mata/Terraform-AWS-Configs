@@ -22,4 +22,4 @@ variable "public_subnet_cidr_block" {}
 #Private Subnet Variable declaration
 variable "private_subnet_availability_zone" {}
 variable "private_subnet_cidr_block" {}
-variable "private_subnet_Name" {}
+# variable "private_subnet_Name" {}
