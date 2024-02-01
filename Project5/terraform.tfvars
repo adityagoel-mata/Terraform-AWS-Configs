@@ -72,5 +72,5 @@ db_protocol          = "tcp"
 
 
 #DB-Subnet-Group variables
-db_subnet_group_name = "tf-db-sg-nameArgument"
-db_subnet_group_Name = "tf-db-sg-Name"
+db_subnet_group_name = "tf-db-subnet-group-name"
+db_subnet_group_Name = "tf-db-subnet-group-Name"
