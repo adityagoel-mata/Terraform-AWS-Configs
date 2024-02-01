@@ -79,16 +79,7 @@ module "private_route_table_association" {
 }
 
 
-module "ec2_launch_template" {
-  source = "./../modules/Launch-Template"
-
-  name          = var.ec2_lt_name
-  image_id      = var.ec2_lt_image_id
-  instance_type = var.ec2_lt_instance_type
-  vpc_security_group_ids = [module.ec2_security_group.security_group_id]
-}
-
-
+#Configurations for Auto Scaling Group and its components
 module "autoscaling-group" {
   source = "./../modules/AutoScaling-Group"
   
@@ -97,6 +88,16 @@ module "autoscaling-group" {
   max_size            = var.asg_ec2_max_size
   min_size            = var.asg_ec2_min_size
   id                  = module.ec2_launch_template.launch_template_id
+}
+
+
+module "ec2_launch_template" {
+  source = "./../modules/Launch-Template"
+
+  name          = var.ec2_lt_name
+  image_id      = var.ec2_lt_image_id
+  instance_type = var.ec2_lt_instance_type
+  vpc_security_group_ids = [module.ec2_security_group.security_group_id]
 }
 
 
@@ -114,6 +115,7 @@ module "ec2_security_group" {
 }
 
 
+#Configuration for the RDS instance and its components
 module "mysql_db_instance" {
   source = "./../modules/RDS-instance"
 
