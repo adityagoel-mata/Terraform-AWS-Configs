@@ -8,7 +8,7 @@ module "vpc" {
 
 module "public_subnet" {
   source            = "../modules/Subnet"
-  count = var.public_subnet_count
+  counts = var.public_subnet_counts
   vpc_id            = module.vpc.vpc_id
   availability_zone = var.public_subnet_availability_zone
   cidr_block        = var.public_subnet_cidr_block
