@@ -136,6 +136,7 @@ module "db_security_group" {
 
   sg_name        = var.db_sg_name
   sg_description = var.db_sg_description
+  vpc_id         = module.vpc.vpc_id
   sg_tag_name    = var.db_sg_tag_name
   from_port      = var.db_from_port
   to_port        = var.db_to_port
