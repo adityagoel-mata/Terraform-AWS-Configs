@@ -40,6 +40,7 @@ module "public_route_table" {
 module "public_route_table_association" {
   source         = "../modules/Route-Table-Association"
   
+  count = 2
   subnet_id      = module.public_subnet[count.index].subnet_id
   route_table_id = module.public_route_table.route_table_id
 }
