@@ -15,10 +15,10 @@ vpc_name = "tf-VPC"
 # private_route_table_Name = "tf-private-route-table"
 
 #Public Subnet Variables
-public_subnet_counts = 2
+# public_subnet_count = 2
 public_subnet_availability_zone = "us-east-2a"
 public_subnet_cidr_block = "10.0.1.0/24"
-# public_subnet_Name = "Public-Subnet1"
+public_subnet_Name = "Public-Subnet1"
 
 # #Private Subnet Variables
 # private_subnet_availability_zone = "us-east-2b"
