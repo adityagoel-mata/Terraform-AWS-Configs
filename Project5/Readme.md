@@ -7,3 +7,5 @@ This project should do the following steps:
 6. Create an ASG with 2 EC2 instances, each running in 1 Public Subnet respectively.
 7. Create 1 RDS instance running in 1 Private Subnet.
 8. Create a Replica-RDS instance in other private Subnet.
+
+![Ani5](https://github.com/adityagoel-mata/Terraform-AWS-Configs/assets/50823187/f1b32ac2-c0ea-468c-8086-7238f03191a1)
