@@ -2,7 +2,7 @@
 
 This repository can be used to implement **Infrastructure-as-Code (IaC)** on AWS using Terraform.
 
-Folder Structure:
+**Folder Structure:**
 1. **./modules:** Generalized template to set up various AWS services.
 2. **./Project1 to ./ProjectN**: Different IaC Projects with increasing complexity.
 
