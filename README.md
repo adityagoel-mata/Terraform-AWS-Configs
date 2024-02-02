@@ -28,6 +28,7 @@ An Auto-Scaling Group is created along with a launch template of an EC2 instance
 **Project 2**
 
 An RDS instance and an EC2 instance are created with their security groups such that traffic inbound to the RDS instance can only be from the EC2 instance.
+
 ![Ani_P2](https://github.com/adityagoel-mata/Terraform-AWS-Configs/assets/50823187/e8248c23-356d-4275-b661-a346d4486f8e)
 
 
