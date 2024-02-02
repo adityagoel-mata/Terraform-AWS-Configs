@@ -21,11 +21,15 @@ A VPC with one Public and one Private subnet, each in different AZs are created.
 **Project 3**
 
 An Auto-Scaling Group is created along with a launch template of an EC2 instance and its Security Group.
+![Ani_P3](https://github.com/adityagoel-mata/Terraform-AWS-Configs/assets/50823187/67ae6e7c-b128-487d-8161-0784be829eb2)
+
 
 
 **Project 2**
 
 An RDS instance and an EC2 instance are created with their security groups such that traffic inbound to the RDS instance can only be from the EC2 instance.
+![Ani_P2](https://github.com/adityagoel-mata/Terraform-AWS-Configs/assets/50823187/e8248c23-356d-4275-b661-a346d4486f8e)
+
 
 
 **Project 1**
