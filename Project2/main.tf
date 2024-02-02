@@ -20,7 +20,6 @@ module "mysql_db_instance" {
   parameter_group_name = var.parameter_group_name
   skip_final_snapshot  = var.skip_final_snapshot
   vpc_security_group_ids = [module.db_security_group.security_group_id]
-
 }
 
 module "ec2_security_group" {
@@ -46,7 +45,6 @@ module "db_security_group" {
   to_port        = var.db_to_port
   protocol       = var.db_protocol
   security_groups = [module.ec2_security_group.security_group_id]
-
 }
 
 
