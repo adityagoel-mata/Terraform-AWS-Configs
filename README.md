@@ -11,11 +11,13 @@ This repository can be used to implement **Infrastructure-as-Code (IaC)** on AWS
 **Project 5**
 
 A two-tier architecture consisting of a VPC with two Private and two Public subnets, each pair in a different AZ. The Public subnets host an EC2 instance through an Auto-Scaling Group while the Private subnets host an RDS instance. Relevant Route-Table, Internet Gateway and Security Groups are associated with relevant resources.
+![Ani5](https://github.com/adityagoel-mata/Terraform-AWS-Configs/assets/50823187/94beb9a9-f8d7-4cc5-9f8f-dc5099d78228)
 
 
 **Project 4**
 
 A VPC with one Public and one Private subnet, each in different AZs are created. Two relevant route tables are created, each associated with a subnet. An Internet Gateway is created for the route table of the Public subnet.
+![Ani_P4](https://github.com/adityagoel-mata/Terraform-AWS-Configs/assets/50823187/f8c73079-35c7-434a-beac-2115c636773e)
 
 
 **Project 3**
