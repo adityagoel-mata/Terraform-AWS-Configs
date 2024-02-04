@@ -2,7 +2,7 @@
 variable "sg_name" {}
 variable "sg_description" {}
 variable "vpc_id" {
-  default = "default"
+  default = null
 }
 variable "sg_tag_name" {}
 variable "from_port" {}
