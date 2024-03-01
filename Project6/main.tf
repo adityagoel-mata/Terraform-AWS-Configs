@@ -4,7 +4,8 @@ module "k8s_master_ec2_instance" {
   ami                    = var.k8s_master_ami
   instance_type          = var.k8s_master_instance_type
   vpc_security_group_ids = [module.k8s_master_ec2_security_group.security_group_id]
-  user_data              = var.k8s_master_user_data
+  #user_data              = var.k8s_master_user_data
+  user_data              = "${file("k8s-master-installation.sh")}"
   instance_name          = var.k8s_master_instance_name
 }
 
@@ -29,7 +30,8 @@ module "k8s_worker_ec2_instance" {
   ami                    = var.k8s_worker_ami
   instance_type          = var.k8s_worker_instance_type
   vpc_security_group_ids = [module.k8s_worker_ec2_security_group.security_group_id]
-  user_data              = var.k8s_worker_user_data
+  #user_data              = var.k8s_worker_user_data
+  user_data              = "${file("k8s-master-installation.sh")}"
   instance_name          = var.k8s_worker_instance_name
 }
 
