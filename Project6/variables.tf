@@ -1,7 +1,7 @@
 #k8s_master_EC2 variable declaration
 variable "k8s_master_ami" {}
 variable "k8s_master_instance_type" {}
-variable "k8s_master_user_data" {}
+#variable "k8s_master_user_data" {}
 variable "k8s_master_instance_name" {}
 
 
@@ -18,7 +18,7 @@ variable "k8s_master_ec2_cidr_blocks" {}
 #k8s_worker_EC2 variable declaration
 variable "k8s_worker_ami" {}
 variable "k8s_worker_instance_type" {}
-variable "k8s_worker_user_data" {}
+#variable "k8s_worker_user_data" {}
 variable "k8s_worker_instance_name" {}
 
 
