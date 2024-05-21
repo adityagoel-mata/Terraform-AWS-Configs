@@ -39,3 +39,6 @@ An RDS instance and an EC2 instance are created with their security groups such 
 
 An EC2 instance is created with its Security Group.
 ![Animation1](https://github.com/adityagoel-mata/Terraform-AWS-Configs/assets/50823187/f2e35cc0-04a1-4b83-add4-1ff1bbc809d7)
+
+
+#Adding dummy code for sonarqube testing
