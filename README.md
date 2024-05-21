@@ -42,3 +42,9 @@ An EC2 instance is created with its Security Group.
 
 
 #Adding dummy code for sonarqube testing
+I am adding a dummy 
+uncommented code for SQ
+Will it be counted as 3 lines?
+Or four?
+Or will it be counted as 0 because it is in README.md?
+(Or six?)
